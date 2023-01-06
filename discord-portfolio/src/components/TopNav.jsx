@@ -23,3 +23,5 @@ const ThemeIcon = () => {
     </span>
     )
 }
+
+export default TopNav
