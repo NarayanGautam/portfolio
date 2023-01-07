@@ -9,9 +9,9 @@ const useLocalStorage = (key, initialValue) => {
         console.log(error);
         return initialValue;
       }
-    });
+});
   
-    const setValue = (value) => {
+const setValue = (value) => {
       try {
         const valueToStore = value instanceof Function ? value(storedValue) : value;
   
@@ -23,9 +23,9 @@ const useLocalStorage = (key, initialValue) => {
       }
     };
     return [storedValue, setValue];
-  };
+};
   
-  const useDarkMode = () => {
+const useDarkMode = () => {
     const [enabled, setEnabled] = useLocalStorage('dark-theme');
     const isEnabled = typeof enabledState === 'undefined' && enabled;
   
@@ -37,7 +37,7 @@ const useLocalStorage = (key, initialValue) => {
     }, [enabled, isEnabled]);
   
     return [enabled, setEnabled];
-  };
+};
   
 
 

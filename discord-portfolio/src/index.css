@@ -4,13 +4,13 @@
 
 @layer components {
   .sidebar-icon {
-    @apply relative flex items-center justify-center h-16 w-16 mt-2 mb-2 mx-auto shadow-lg
+    @apply relative flex items-center justify-center h-14 w-14 mt-2 mb-2 mx-auto shadow-lg
     bg-gray-300 dark:bg-gray-700 text-green-400 hover:bg-green-500 hover:text-white rounded-full hover:rounded-xl
     transition-all;
   }
 
   .sidebar-hover {
-    @apply absolute w-auto p-2 m-2 min-w-max left-20 rounded-lg shadow-md text-white bg-gray-800 
+    @apply absolute w-auto p-2 m-2 min-w-max left-16 rounded-lg shadow-md text-white bg-gray-800 
     text-xs font-bold transition-all ease-in scale-0 origin-left;
   }
 
@@ -38,5 +38,11 @@
 
   .top-nav-icon:first {
     @apply ml-auto mr-4;
+  }
+
+  .title-text {
+    @apply text-xl text-gray-500 tracking-wider font-semibold text-opacity-80 
+    mr-auto my-auto 
+    transition duration-300 ease-in-out;
   }
 }
