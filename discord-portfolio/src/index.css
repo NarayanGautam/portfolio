@@ -9,7 +9,7 @@
   .sidebar-icon {
     @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
     bg-gray-300 dark:bg-gray-700 text-green-400 hover:bg-green-500 hover:text-white rounded-full hover:rounded-xl
-    transition duration-300 ease-in-out;
+    transition duration-300 ease-in-out cursor-pointer;
   }
 
   .sidebar-hover {
@@ -40,7 +40,7 @@
   }
   
   .dropdown {
-    @apply m-0 w-full px-2 pb-2 transition duration-300 ease-in-out 
+    @apply m-0 w-full px-2 pb-2 transition duration-300 ease-in-out cursor-pointer
   }
   
   .dropdown-header {
@@ -113,11 +113,11 @@
   
   .post {
     @apply flex flex-row
-    w-full py-4 px-8 m-0 
+    w-full py-4 m-0 
   }
 
   .post-content {
-    @apply w-4/5 flex flex-col ml-auto 
+    @apply w-11/12 flex flex-col ml-auto 
   }
 
   .post-writer {
@@ -134,6 +134,10 @@
 
   .avatar-wrap {
     @apply flex flex-col items-center  w-12 m-0 ml-auto mb-auto 
+  }
+
+  .avatar {
+    @apply w-12 h-12 rounded-full bg-slate-200
   }
 
 

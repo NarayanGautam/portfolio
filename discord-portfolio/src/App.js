@@ -2,14 +2,20 @@ import './App.css';
 import ChannelBar from './components/ChannelBar';
 import SideBar from './components/SideBar';
 import Content from './components/Content';
+import Home from './pages/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import About from './pages/About';
+
+
 
 function App() {
   return (
-    <div className='flex'>
-      <SideBar/>
-      <ChannelBar/>
-      <Content/>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 

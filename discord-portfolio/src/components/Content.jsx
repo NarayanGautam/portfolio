@@ -23,7 +23,7 @@ const Content = () => {
 const Post = ({ name, time, text }) => (
     <div className="post">
         <div className="avatar-wrap">
-            <img src="https://avatars.dicebear.com/api/open-peeps/1.svg" alt="avatar" />
+            <img src="https://avatars.dicebear.com/api/open-peeps/1.svg" alt="avatar" className="avatar" />
         </div>
         <div className="post-content">
             <div className="post-writer">
