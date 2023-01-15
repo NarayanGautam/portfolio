@@ -2,18 +2,18 @@ import SideBar from "../components/SideBar"
 import ChannelBar from "../components/ChannelBar"
 import Content from "../components/Content"
 
-export default function About() {
+export default function Experience() {
   let data = {
     "channels": {
-      "General": [ "about me", "my skills", "resume", "contact me"],
-      "Projects": ["project 1", "project 2", "project 3", "project 4"],
+      "Work Experience": ["Teaching Assistant", "UI/UX Design"],
+      "Projects": ["Full Stack Art Gallery", "Discord Themed Portfolio", "Pokemon Query Program"],
     }
   }
 
   return (
     <div className='flex'>
         <SideBar />
-        <ChannelBar page="About Me" {...data}/>
+        <ChannelBar page="Experience" {...data}/>
         <Content />
     </div>
   )

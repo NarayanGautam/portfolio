@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className='flex'>
         <SideBar />
-        <ChannelBar {...data} />
+        <ChannelBar page="Home" {...data} />
         <Content />
     </div>
   )

@@ -1,6 +1,3 @@
-// figure out how to get this data based on what page they are on 
-//const topics = {};
-
 import { useState } from "react";
 import { BsHash } from 'react-icons/bs';
 import { FaChevronDown, FaChevronRight, FaPlus } from 'react-icons/fa';
@@ -9,10 +6,9 @@ import { HiSpeakerWave } from 'react-icons/hi2';
 
 const ChannelBar = (data) => {
     let channels = data.channels;
-
     return (
         <div className="channel-bar shadow-lg">
-            <ChannelBlock />
+            <ChannelBlock page={data.page}/>
             <div className="channel-container">
                 {Object.keys(channels).map((channel) => (
                     <Dropdown header={channel} selections={channels[channel]} />
@@ -23,9 +19,9 @@ const ChannelBar = (data) => {
     )
 }
 
-const ChannelBlock = () => (
+const ChannelBlock = ({page}) => (
     <div className="channel-block">
-        <h5 className="channel-block-text">Channels</h5>
+        <h5 className="channel-block-text">{page}</h5>
     </div>
 )
 
@@ -42,10 +38,7 @@ const Dropdown = ({ header, selections }) => {
                 <FaPlus size="12" className="text-accent text-opacity-80 my-auto ml-auto" />
             </div>
             {expanded && selections && selections.map((selection) => <TopicSelection selection={selection} />)}
-            <div className="dropdown-selection">
-                <HiSpeakerWave size="16" className="text-gray-400" />
-                <h5 className="dropdown-selection-text">&nbsp;chat</h5>
-            </div>
+            {expanded && <Speaker />}
         </div>
     )
 }
@@ -54,6 +47,12 @@ const TopicSelection = ({ selection }) => (
     <div className="dropdown-selection">
         <BsHash size="24" className="text-gray-400" />
         <h5 className="dropdown-selection-text">{selection}</h5>
+    </div>
+)
+const Speaker = () => (
+    <div class="dropdown-selection">
+        <HiSpeakerWave size="18" className="text-gray-400" />
+        <h5 className="dropdown-selection-text">&nbsp;chat</h5>
     </div>
 )
 

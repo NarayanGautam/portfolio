@@ -8,7 +8,7 @@
 
   .sidebar-icon {
     @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
-    bg-gray-300 dark:bg-gray-700 text-green-400 hover:bg-green-500 hover:text-white rounded-full hover:rounded-xl
+    bg-gray-300 dark:bg-gray-700 text-blue-500 hover:bg-blue-500 hover:text-white rounded-full hover:rounded-xl
     transition duration-300 ease-in-out cursor-pointer;
   }
 
@@ -60,7 +60,7 @@
   }
   
   .dropdown-selection-text {
-    @apply text-gray-500 font-semibold tracking-wide
+    @apply text-gray-500 font-semibold tracking-wide 
     mr-auto 
     transition duration-300 ease-in-out 
     hover:text-pink-500 dark:hover:text-gray-500
@@ -79,7 +79,7 @@
     @apply text-gray-500
     mr-3 ml-4
     transition duration-300 ease-in-out 
-    hover:text-red-500
+    hover:text-emerald-300
     cursor-pointer;
   }
   
