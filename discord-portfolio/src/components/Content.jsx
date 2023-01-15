@@ -6,7 +6,7 @@ const Content = () => {
             <TopNav />
             <div className="content-list">
                 <Post 
-                    name = "Tailwind CSS"
+                    name = "Shuva Gautam"
                     time = "2 hours ago"
                     text = {"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
                 />

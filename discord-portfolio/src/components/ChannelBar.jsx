@@ -4,19 +4,19 @@
 import { useState } from "react";
 import { BsHash } from 'react-icons/bs';
 import { FaChevronDown, FaChevronRight, FaPlus } from 'react-icons/fa';
+import { HiSpeakerWave } from 'react-icons/hi2';
 
-const topics = ['tailwind-css', 'react'];
-const questions = ['jit-compilation', 'purge-files', 'dark-mode'];
-const random = ['variants', 'plugins'];
 
-const ChannelBar = () => {
+const ChannelBar = (data) => {
+    let channels = data.channels;
+
     return (
         <div className="channel-bar shadow-lg">
             <ChannelBlock />
             <div className="channel-container">
-                <Dropdown header="Topics" selections={topics} />
-                <Dropdown header="Questions" selections={questions} />
-                <Dropdown header="Random" selections={random} />
+                {Object.keys(channels).map((channel) => (
+                    <Dropdown header={channel} selections={channels[channel]} />
+                ))}
             </div>
 
         </div>
@@ -42,6 +42,10 @@ const Dropdown = ({ header, selections }) => {
                 <FaPlus size="12" className="text-accent text-opacity-80 my-auto ml-auto" />
             </div>
             {expanded && selections && selections.map((selection) => <TopicSelection selection={selection} />)}
+            <div className="dropdown-selection">
+                <HiSpeakerWave size="16" className="text-gray-400" />
+                <h5 className="dropdown-selection-text">&nbsp;chat</h5>
+            </div>
         </div>
     )
 }

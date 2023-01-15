@@ -1,4 +1,4 @@
-import { MdLightMode, MdDarkMode } from "react-icons/md";
+import { MdLightMode, MdDarkMode, MdAccountBox } from "react-icons/md";
 
 import useDarkMode from "../hooks/useDarkMode";
 
@@ -7,6 +7,7 @@ const TopNav = () => {
         <div className="top-nav">
             <ServerTitle />
             <ThemeIcon />
+            <ProfileIcon />
         </div>
     );
 };
@@ -23,6 +24,14 @@ const ThemeIcon = () => {
       )}
     </span>
     )
+}
+
+const ProfileIcon = () => {
+  return (
+    <span>
+      <MdAccountBox size='24' className='top-nav-icon' />
+    </span>
+  )
 }
 
 const ServerTitle = () => <h5 className="title-text"># Shuva Narayan Gautam Portfolio</h5>
