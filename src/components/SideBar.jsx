@@ -27,10 +27,10 @@ const Socials = () => (
   <>
     <hr className="sidebar-hr" />
     <div className="sidebar-icon ">
-      <a href="https://github.com/NarayanGautam" target="_blank">{<BsGithub size="30" />}</a>
+      <a href="https://github.com/NarayanGautam" target="_blank" rel="noreferrer">{<BsGithub size="30" />}</a>
     </div>
     <div className="sidebar-icon">
-      <a href="https://www.linkedin.com/in/shuva-narayan-gautam-1365b217a/" target="_blank">{<BsLinkedin size="30" />}</a>
+      <a href="https://www.linkedin.com/in/shuva-narayan-gautam-1365b217a/" target="_blank" rel="noreferrer">{<BsLinkedin size="30" />}</a>
     </div>
   </>
 );
